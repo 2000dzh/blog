@@ -20,7 +20,9 @@ hero:
 ---
 
 <home></home>
+<base11></base11>
 
 <script lang="ts" setup>
 import home from './.vitepress/theme/views/home.vue'
+import base11 from './.vitepress/theme/components/base11.vue'
 </script>

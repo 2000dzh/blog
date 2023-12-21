@@ -15,8 +15,9 @@
         </div>
       </div>
       <div class="types">
-        <span style="background-color: rgba(165, 96, 247, 0.43); color: rgb(85, 27, 177);" class="project-type">•
-          Analytics</span>
+        <span style="background-color: rgba(165, 96, 247, 0.43); color: rgb(85, 27, 177);" class="project-type">
+          •Analytics
+        </span>
         <span class="project-type">• Dashboards</span>
       </div>
     </div>

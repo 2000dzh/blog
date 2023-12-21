@@ -1,15 +1,15 @@
 import { defineConfig, type SiteConfig } from 'vitepress'
+import nav from './utils/nav'
+import sidebar from './utils/sidebar'
 
 export default defineConfig({
 	themeConfig: {
 		siteTitle: '我豪',
-		nav: [
-			{ text: '首页', link: '/' },
-			{ text: '笔记', link: '/笔记/' },
-		],
+		nav,
 		search: {
 			provider: 'local',
 		},
+		sidebar,
 		footer: {
 			message:
 				'<a > 底部内容 </a>' +
