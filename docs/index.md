@@ -6,9 +6,9 @@ titleTemplate: false
 hero:
     name: '学习开发日常记录'
     text: Hello
-    tagline: Record my learning and life...
+    tagline: 记录学习感悟
     image:
-      src: ''
+      src: './asstes/logo.jpg'
       alt: logo
     actions:
       - theme: brand

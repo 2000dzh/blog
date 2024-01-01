@@ -1,6 +1,5 @@
-import { defineConfig, type SiteConfig } from 'vitepress'
-import nav from './utils/nav'
-import sidebar from './utils/sidebar'
+import { defineConfig } from 'vitepress';
+import { nav, sidebar } from './utils';
 
 export default defineConfig({
 	themeConfig: {
@@ -15,8 +14,12 @@ export default defineConfig({
 				'<a > 底部内容 </a>' +
 				'&nbsp &nbsp | &nbsp &nbsp' +
 				'<a  target="_blank">1</a>',
-			copyright: '<a  target="_blank">待定</a>',
+			copyright: '<a  target="_blank">11111</a>',
 		},
 		logo: '',
 	},
-})
+
+	// vite: {
+	// 	plugins: [],
+	// },
+});
