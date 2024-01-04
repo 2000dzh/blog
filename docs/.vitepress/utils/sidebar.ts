@@ -5,9 +5,12 @@ enum CATALOG_DICTIONARY {
 	NOTE = '笔记',
 }
 
+const noNeedToParseFileFormat = ['.vue'];
+
 export const createSidebar = (catalogue: string) => {
 	let res = fs.readdirSync(path.resolve(__dirname, `../../${catalogue}`));
 	if (res) {
+		console.log(res);
 		let arr = res.map((item) => {
 			if (String(item).endsWith('.md')) {
 				const items = item.replace('.md', '').split('--');
@@ -16,7 +19,7 @@ export const createSidebar = (catalogue: string) => {
 					link: `${catalogue}/${item}`,
 					initTime: new Date(items[1]).getTime() || Date.now(),
 				};
-			} else {
+			} else if (noNeedToParseFileFormat.some((k) => !item.includes(k))) {
 				return {
 					text: item,
 					items: createSidebar(`${catalogue}/${item}`),

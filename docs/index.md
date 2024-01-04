@@ -8,7 +8,7 @@ hero:
     text: Hello
     tagline: 记录学习感悟
     image:
-      src: './asstes/logo.jpg'
+      src: './public/logo.jpg'
       alt: logo
     actions:
       - theme: brand
