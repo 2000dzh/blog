@@ -8,15 +8,15 @@ hero:
     text: Hello
     tagline: 记录学习感悟
     image:
-      src: './public/logo.jpg'
-      alt: logo
+        src: 'logo.jpg'
+        alt: logo
     actions:
-      - theme: brand
-        text: 开始
-        link: /base
-      - theme: alt
-        text: GitHub
-        link: ''
+        - theme: brand
+          text: 开始
+          link: /base
+        - theme: alt
+          text: GitHub
+          link: ''
 ---
 
 <home></home>

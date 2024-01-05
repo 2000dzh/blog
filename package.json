@@ -17,5 +17,8 @@
 		"sass": "^1.69.5",
 		"vitepress": "1.0.0-rc.32",
 		"vue": "^3.3.13"
+	},
+	"dependencies": {
+		"animate.css": "^4.1.1"
 	}
 }

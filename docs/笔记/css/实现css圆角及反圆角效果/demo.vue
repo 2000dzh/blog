@@ -10,7 +10,7 @@
 			<span>{{ tab.label }}</span>
 		</div>
 	</div>
-	<div class="content-area">内容{{ activeTab }}</div>
+	<div class="content-area">内容{{ activeTab +1 }}</div>
 </template>
 
 <script setup lang="ts">
@@ -21,7 +21,7 @@ import { ref } from 'vue';
 
 let activeTab = ref(0);
 const tabList = ref(
-	Array.from({ length: 3 }, function (item, index) {
+	Array.from({ length: 10 }, function (item, index) {
 		return {
 			label: `选项${index + 1}`,
 			value: index,

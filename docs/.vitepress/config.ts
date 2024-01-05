@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress';
 import { nav, sidebar } from './utils';
 
+
 export default defineConfig({
 	themeConfig: {
 		siteTitle: '我豪',

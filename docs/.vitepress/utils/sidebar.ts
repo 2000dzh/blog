@@ -10,7 +10,6 @@ const noNeedToParseFileFormat = ['.vue'];
 export const createSidebar = (catalogue: string) => {
 	let res = fs.readdirSync(path.resolve(__dirname, `../../${catalogue}`));
 	if (res) {
-		console.log(res);
 		let arr = res.map((item) => {
 			if (String(item).endsWith('.md')) {
 				const items = item.replace('.md', '').split('--');
