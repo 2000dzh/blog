@@ -17,18 +17,20 @@ export default {
 		});
 
 		const route = useRoute();
-
 		let intersectionObserver: IntersectionObserver | null = null;
 
 		const addTypingAnimation = () => {
-			const main =
-				(document.querySelector('.vp-doc>div') as HTMLElement) || {};
+			const main = (document.querySelector('.vp-doc>div') as HTMLElement) || {};
 
 			const paragraph = getChildNodes(main.childNodes || []);
 
 			paragraph.forEach((item) => {
 				const observer = new IntersectionObserver(
 					([{ isIntersecting }]) => {
+						item.classList.remove('animate__animated');
+						item.classList.remove('animate__fadeInUp');
+						item.classList.remove('animate__fadeInDown');
+
 						const distanceFromTop =
 							document.documentElement.scrollTop ||
 							document.body.scrollTop;
@@ -38,11 +40,12 @@ export default {
 							observer.unobserve(item);
 
 							item.classList.add('animate__animated');
-							if (distanceFromTop === 0) {
+
+							if (distanceFromTop > 0) {
+								item.classList.add('animate__fadeInUp');
+							} else if (distanceFromTop === 0) {
 								// 初始化
 								item.classList.add('animate__fadeInDown');
-							} else {
-								item.classList.add('animate__fadeInUp');
 							}
 						}
 					}
@@ -74,7 +77,6 @@ export default {
 		watch(
 			() => route.path,
 			() => {
-        console.log('2112')
 				clearObserver();
 				addTypingAnimation();
 			},
